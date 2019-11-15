@@ -12,7 +12,7 @@
 ## Notices
 0. Feel free to modify project
 1. This project is generated from [HTML5-Boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/README.md)
-2. Basic descriptions are [Here](/https://github.com/h5bp/html5-boilerplate/tree/master/src/doc)
+2. Basic descriptions are [Here](https://github.com/rhodochrosite/web-app-team-project/tree/master/doc)
 3. Basic workflow is
 ```markdown
 1. set your goal
