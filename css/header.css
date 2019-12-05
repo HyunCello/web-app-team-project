@@ -1,4 +1,28 @@
+header{
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px solid black;
+  overflow: hidden;
+}
 #logo {
+  background-color: black;
   border: 2px solid black;
   float: left;
+  margin:0;
+}
+nav{
+  height: 30px;
+}
+nav ul{
+  margin:0;
+}
+nav ul a{
+  font-size: 25px;
+}
+.nav-button {
+  display: inline-block;
+  text-decoration: none;
+}
+.nav-button:hover{
+  background-color: rgba(57, 57, 88, 0.9);
 }
