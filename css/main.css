@@ -1,5 +1,59 @@
 body {
   margin: 0;
+  margin-left:auto;
+  margin-right:auto;
+  width:1145px;
   background-color: rgba(218, 218, 218, 0.867);
+  position: relative;
 }
 
+section{
+  
+  width: 40%;
+  height: 30%;
+  display: inline-block;
+  float:left;
+  margin: 0;
+  margin-left:5px;
+  margin-right:5px;
+  
+}
+
+table, tr, td{
+  border:1px solid black;
+  border-collapse:collapse;
+}
+
+@media (max-width:1145px){
+
+  body {
+    margin: 0;
+    width:auto;
+    background-color: rgba(218, 218, 218, 0.867);
+  }
+  
+  section{
+    float: left;
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: 0;
+    margin-left:5px;
+    margin-right:5px;
+    
+  }
+  
+  table, tr, td{
+    border:1px solid black;
+    border-collapse:collapse;
+  }
+  img{
+    max-width: 100%;
+  }
+
+
+
+
+
+
+}
