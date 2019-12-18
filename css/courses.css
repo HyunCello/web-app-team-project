@@ -1,3 +1,53 @@
 .container {
   padding-top: 30px;
 }
+.search-bar {
+  text-align: center;
+}
+
+.search-bar input{
+  display: inline-block;
+  height: 50px;
+  margin: 10px;
+  border: 1px solid red;
+  text-align: center;
+}
+
+.search-bar input:focus {
+  background-color: yellow;
+}
+
+.search-bar #msg {
+  width: 500px;
+}
+.search-bar #submit {
+  width: 100px;
+}
+
+.result {
+  text-align: left;
+  padding: 10px;
+}
+
+.result h3 {
+  background-color: lightblue;
+  font-size: xx-large;
+  color: red;
+  margin: 0;
+}
+
+.result h4 {
+  background-color: antiquewhite;
+  margin: 5px;
+  color: green;
+}
+
+.result .code {
+  margin: 10px;
+  color: #00abd9;
+}
+
+.result .text {
+  margin: 10px;
+  color: gray;
+}

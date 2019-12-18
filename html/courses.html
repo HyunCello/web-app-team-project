@@ -10,7 +10,6 @@
   <link rel="manifest" href="../site.webmanifest">
   <link rel="apple-touch-icon" href="../icon.png">
   <!-- Place favicon.ico in the root directory -->
-
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/courses_orig.css">
   <link rel="stylesheet" href="../css/courses.css">
@@ -20,6 +19,8 @@
 
   <!--  Prototype.js -->
   <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 </head>
 
 <body>
@@ -52,7 +53,12 @@
       <div class="first-tab" data-tab="main">Home</div>
       <div class="deactive last-tab" data-tab="slides">Slides</div>
     </div>
+
     <div id="hl"></div>
+
+    <div class="search-bar" id="search-bar">
+      <!--      <label for="msg"></label><input id="msg" name="msg"/>-->
+    </div>
     <div id="main">
       <div class="wrap-subcontent">
         <h3>Course Objectives</h3>
@@ -228,36 +234,6 @@
           </li>
         </ul>
       </div>
-
-      <!--
-        <div class="wrap-subcontent last">
-          <h3>Midterm Notice</h3>
-          <ul>
-            <li>10/25(fri) 13:00 ~ 16:00</li>
-            <li>12:50 까지 강의실로 와주세요 / Please come to the classroom by 12:50</li>
-            <li>Laptop 파워 부족한 분들은 본인이 직접 멀티탭 챙겨오셔야 합니다 / If you do not have enough Laptop power, you should bring your own power strip</li>
-            <li>
-              PC실습실01 (4공학관) / PC Lab 01 (4th Eng)
-              <ul>
-                <li><strong>랩탑 사용자 중 다음 인원 / Use Laptop</strong></li>
-                  <ul>
-                    <li>Xiang Fangsong, Shu Zhuwen, Frederik Bonde, Tsoy Sergey</li>
-                    <li>Zhou Xueyi, Ana Carolina Cardoso, 김우정, 이효원(2016003845), 강민제</li>
-                    <li>한동연, 박예림, 이지선, 사은수, 김용준, 유영민, 김태웅, 이무경</li>
-                  </ul>
-                <li><strong>실습실 데스크탑 사용자들 (모든 랩탑 미사용자들)</strong></li>
-              </ul>
-            </li>
-            <li>
-              학술관 101호
-              <ul>
-                <li>위 목록에 이름이 없는 Laptop사용 학생은 모두 학술관 101호 입니다.</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      -->
-
       <div class="wrap-subcontent last">
         <h3>Assessments</h3>
         <ul>
@@ -275,7 +251,6 @@
 
 </div>
 
-
-
+<script src="../js/courses.js"></script>
 </body>
 </html>
