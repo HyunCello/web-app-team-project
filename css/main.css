@@ -24,7 +24,7 @@ table, tr, td{
   border-collapse:collapse;
 }
 
-@media (max-width:1145px){
+@media (max-width:1000px){
 
   body {
     margin: 0;

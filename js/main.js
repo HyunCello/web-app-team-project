@@ -21,7 +21,7 @@ function hide(){
 }
 
   
-var DefineSize = window.matchMedia("(max-width: 1145px)")
+var DefineSize = window.matchMedia("(max-width: 1000px)")
 myFunction(DefineSize) // Call listener function at run time
 DefineSize.addListener(myFunction) // Attach listener function on state changes
 
