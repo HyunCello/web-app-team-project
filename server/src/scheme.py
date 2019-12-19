@@ -8,6 +8,12 @@ from flask_praetorian import Praetorian
 guard = Praetorian()
 
 
+def add(x):
+  session = db_session()
+  session.add(x)
+  session.commit()
+
+
 class CreateUser(graphene.Mutation):
   username = graphene.String()
   rolenames = graphene.String()
@@ -24,13 +30,41 @@ class CreateUser(graphene.Mutation):
                 password=guard.hash_password(password),
                 rolenames=rolenames,
                 is_active=is_active)
-    session = db_session()
-    session.add(user)
-    session.commit()
+    add(user)
 
     return CreateUser(username=username,
                       rolenames=rolenames,
                       is_active=is_active)
+
+
+class CreateComment(graphene.Mutation):
+  content = graphene.String()
+  registered_data = graphene.Date()
+
+  class Arguments:
+    content = graphene.String()
+    registered_data = graphene.Date()
+
+  def mutate(self, info, content, registered_data):
+    comment = Comment(content=content, registered_data=registered_data)
+    add(comment)
+    return CreateComment(content=content, registered_data=registered_data)
+
+
+class CreateProblem(graphene.Mutation):
+  title = graphene.String()
+  content = graphene.String()
+  due_date = graphene.Date()
+
+  class Arguments:
+    title = graphene.String()
+    content = graphene.String()
+    due_date = graphene.Date()
+
+  def mutate(self, info, title, content, due_date):
+    problem = Problem(title=title, content=content, due_date=due_date)
+    add(problem)
+    return CreateComment(title=title, content=content, due_date=due_date)
 
 
 class GetUserToken(graphene.Mutation):
@@ -82,13 +116,15 @@ class Query(graphene.ObjectType):
     query = ProblemType.get_query(content)
     return query.all()
 
-  def resolve_comments(self, content):
-    query = CommentType.get_query(content)
+  def resolve_comments(self, context):
+    query = CommentType.get_query(context)
     return query.all()
 
 
 class Mutation(graphene.ObjectType):
   create_user = CreateUser.Field()
+  create_comment = CreateComment.Field()
+  create_problem = CreateProblem.Field()
   get_user_token = GetUserToken.Field()
 
 
