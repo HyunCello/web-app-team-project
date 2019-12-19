@@ -43,6 +43,8 @@ class CreateUser(graphene.Mutation):
 
 class CreateComment(graphene.Mutation):
   id = graphene.Int()
+  username = graphene.String()
+  password = graphene.String()
   content = graphene.String()
   registered_date = graphene.Date()
   problem_id = graphene.Int()
@@ -63,6 +65,7 @@ class CreateComment(graphene.Mutation):
     add(comment)
     return CreateComment(content=content,
                          username=username,
+                         password=password,
                          registered_date=registered_date,
                          problem_id=problem_id)
 
@@ -95,7 +98,6 @@ class GetUserToken(graphene.Mutation):
   def mutate(self, info, username, password):
     user = guard.authenticate(username, password)
     access_token = guard.encode_jwt_token(user)
-    print(access_token)
     return GetUserToken(access_token=access_token)
 
 
