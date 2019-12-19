@@ -10,4 +10,4 @@ graphene
 graphene_sqlalchemy
 cssselect
 requests
-psycopqg2
+psycopg2
