@@ -37,7 +37,7 @@ class KMP:
 
 
 kmp = KMP()
-data = scrap()
+# data = scrap()
 
 
 def search(msg: str) -> list:

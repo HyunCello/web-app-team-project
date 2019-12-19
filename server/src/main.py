@@ -1,4 +1,4 @@
-from flask_restplus import Resource, Namespace
+from lib.flask_restplus import Resource, Namespace
 from flask import request
 from src.search import search
 
