@@ -6,7 +6,7 @@ from config import config
 from src import api
 from src.database import db_session
 from src.models import User
-from src.scheme import schema, guard
+from src.schema import schema, guard
 
 app = Flask(__name__)
 app.debug = True

@@ -7,17 +7,15 @@ class Result extends React.Component {
   render() {
     return (
       <div className={"result"}>
-        <h3>{this.props.title}</h3>
-        <h4>code</h4>
+        <h3><a href={this.props.href}>{this.props.title}</a></h3>
         <div className={"result-box"}>
           <div className={"code"}>
-            {this.props.code}
+            <span>{this.props.code}</span>
           </div>
         </div>
-        <h4>text</h4>
         <div className={"result-box"}>
           <div className={"text"}>
-            {this.props.text}
+            <span>{this.props.text}</span>
           </div>
         </div>
       </div>
@@ -42,6 +40,9 @@ class App extends React.Component {
   };
 
   onBlur = () => {
+    this.setState({
+      data: null
+    });
     document.getElementById('main').style.visibility = 'visible'
     // document.getElementById('tab').style.visibility = 'visible'
 
@@ -52,7 +53,7 @@ class App extends React.Component {
     let keyword = document.getElementsByClassName('keyword').item(0).value;
     console.log(keyword);
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:5000/api?msg=' + keyword);
+    xhr.open('GET', 'http://35.206.218.100:5000/api?msg=' + keyword);
     xhr.onload = () => {
       if (xhr.status === 200) {
         let parseElement = JSON.parse(xhr.responseText)['data'];
@@ -89,14 +90,15 @@ class App extends React.Component {
 
         <div>
           <input className={'keyword'} onFocus={this.onFocus} onBlur={this.onBlur} onChange={this.searchKeyword}/>
-        {this.state.data.map((value) => {
-          let title = value['title'][0];
-          let text = value['text'][0];
-          let code = value['code'][0];
+          {this.state.data.map((value) => {
+            let title = value['title'][0];
+            let text = value['text'][0];
+            let code = value['code'][0];
+            let href = value['href'];
 
-          return <Result title={title} text={text} code={code}/>
-        })
-        }</div>
+            return <Result title={title} text={text} code={code} href={href}/>
+          })
+          }</div>
       );
 
     }

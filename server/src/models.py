@@ -1,15 +1,22 @@
-from sqlalchemy import Column, Integer, ForeignKey, String, Float, Boolean
+from sqlalchemy import Column, Integer, ForeignKey, String, Float, Boolean, ARRAY
 from sqlalchemy.orm import relationship
 from src.database import Base, engine
 
 
 class User(Base):
   __tablename__ = 'uuser'
-  identity = Column(Integer, primary_key=True)
+  id = Column(Integer, primary_key=True)
   username = Column(String(150))
   password = Column(String, nullable=False)
-  rolenames = Column(String)
+  roles = Column(ARRAY(String))
   is_active = Column(Boolean, default=True)
+
+  @property
+  def rolenames(self):
+    try:
+      return self.roles
+    except Exception:
+      return []
 
   @classmethod
   def lookup(cls, username):
@@ -18,6 +25,13 @@ class User(Base):
   @classmethod
   def identify(cls, id):
     return cls.query.get(id)
+
+  @property
+  def identity(self):
+    return self.id
+
+  def is_valid(self):
+    return self.is_active
 
 
 class Comment(Base):

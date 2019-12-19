@@ -1,5 +1,5 @@
 /*--------------- NAVIGATION START ------------------*/
-
+/*
 header {
     height: 52px;
     width: 1145px;
@@ -78,7 +78,7 @@ nav ul a {
 .nav-button:hover {
     background-color: rgba(57, 57, 88, 0.9);
 }
-
+*/
 /*--------------- NAVIGATION END ------------------*/
 
 
@@ -89,15 +89,21 @@ nav ul a {
     font-size: 15px;
     width: 1145px;
     margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 40px;
+    padding: 0;
 }
 
 h1 {
     font-size: 60px;
-    color: #00abd9;
+    color: #000000;
     margin: 20px 0 5px 0;
     font-family: Roboto;
     font-weight: 400;
+}
+h2{
+    
 }
 
 .content {
@@ -116,7 +122,7 @@ h1 {
     width: 100%;
     padding-left: 10px;
     margin: 0;
-    background-color: rgb(211, 237, 245);
+    background-color: rgb(131, 121, 143) ;
     color: black;
     line-height: 52px;
     height: 52px;
@@ -149,9 +155,10 @@ h1 {
 
 #info {
     float: left;
-    width: 435px;
+    width: 400px;
     height: 175px;
     line-height: 30px;
+    margin-left: 30px;
 }
 
 #interest {
@@ -190,4 +197,23 @@ details[open] summary:after {
   content: "";
   transform: rotate(-45deg);
   margin-top: -35px;
+}
+
+@media (max-width:1145px){
+    body {
+        margin: 0;
+        width:auto;
+        background-color: rgba(218, 218, 218, 0.867);
+      }
+      .container {
+        font-size: 15px;
+        width: 100%;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        padding: 0;
+    }
+
+
 }
