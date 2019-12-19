@@ -1,15 +1,10 @@
-from collections import defaultdict
-import requests
-from selenium import webdriver
-from lxml.html import HtmlElement, fromstring
 import re
+from collections import defaultdict
+
+import requests
+from lxml.html import HtmlElement, fromstring
 
 URL = 'https://selab.hanyang.ac.kr/courses/cse326/2019/'
-
-option = webdriver.chrome.options.Options()
-option.add_argument('--headless')
-
-wd = webdriver.Chrome('./chromedriver', options=option)
 
 
 def _scrap_slide_links() -> dict:
@@ -35,8 +30,8 @@ def _scrap_slides(url, category) -> list:
     'code': str
   }
   """
-  wd.get(url)
-  page_source = wd.page_source
+  res = requests.get(url)
+  page_source = res.text
   page: HtmlElement = fromstring(page_source, url)
 
   def _norm_text(text):
@@ -45,10 +40,10 @@ def _scrap_slides(url, category) -> list:
     return text
 
   slides = []
-  for each in page.cssselect('div .slide'):
+  for idx, each in enumerate(page.cssselect('div .slide')):
     slide = {
         'title': each.cssselect('h1')[0].text_content(),
-        'href': each.base_url + '#' + each.attrib['id'],
+        'href': each.base_url + f'#slide{idx}',
         'category': category
     }
 
@@ -80,11 +75,9 @@ def scrap() -> list:
   return slides
 
 
-
-
 if __name__ == '__main__':
   examples_url = 'https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/12-ajaxXmlJson.html'
   links = _scrap_slide_links()
   from pprint import pprint
   pprint(links)
-  _scrap_slides(examples_url)
+  _scrap_slides(examples_url, category='lab')
