@@ -48,3 +48,32 @@ function MakeQuestion() {
 function CommentSection() {
 
 }
+
+
+document.addEventListener(`DOMContentLoaded`, () => {
+    // ADD 버튼 클릭했을 때
+    document.querySelector(`#make_question`).addEventListener(`click`, event => {
+        event.stopPropagation()
+        const modal = document.querySelector(`.modal-make-question-wrap`)    
+        
+        modal.classList.remove(`hide`)
+        modal.classList.add(`show`)
+    })
+
+    // ADD 모달창 종료시 (뒤 검은 배경 클릭했을 때)
+    document.querySelector(`.modal-make-question-wrap`).addEventListener(`click`, event => {    
+        if (event.target.classList.contains(`modal-make-question-wrap`)) {
+            const modal = document.querySelector(`.modal-make-question-wrap`)    
+        
+            modal.classList.remove(`show`)
+            modal.classList.add(`hide`)        
+        }        
+    }, true)
+
+    // Register Button 클릭했을 때 (서버로 요청 보내기)
+    document.querySelector(`.btn-quest-submit`).addEventListener(`click`, event => {
+        console.log(`click`)
+        // 민혁이에게 새로운 질문이 등록됨을 알려주고, 리스트 새로갱신
+    })
+})    
+
