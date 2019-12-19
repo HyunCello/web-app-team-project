@@ -1,61 +1,305 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="2019 Web-application team project">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="description" content="2019 Web-application team project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="manifest" href="../site.webmanifest">
-  <link rel="apple-touch-icon" href="../icon.png">
-  <!-- Place favicon.ico in the root directory -->
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
+    <link rel="stylesheet" href="../css/gallery.css">
 
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/gallery.css">
-  <link rel="stylesheet" href="../css/header.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="../materialize/css/materialize.min.css">
 
-  <meta name="theme-color" content="#fafafa">
 
-  <!--  Prototype.js -->
-  <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="../materialize/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <title>Gallery</title>
 </head>
 
 <body>
-<!--[if IE]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
-  your browser</a> to improve your experience and security.</p>
-<![endif]-->
+    <header>
+        <nav>
+            <a href="../index.html"><img src="../selab_logo_S.png" alt="logo"></a>
+            <ul id="showhide">
 
-<!-- Add your site or application content here -->
-<header>
-  <nav>
-    <div id="logo">
-      <a href="../index.html"><img src="../selab_logo_S.png" alt="logo"></a>
+                <li class="nav-button">
+                    <a href="html/notice.html">NOTICE</a>
+                </li>
+                <li class="nav-button">
+                    <a href="https://selab.hanyang.ac.kr/members/">MEMBERS</a>
+                </li>
+                <li class="nav-button">
+                    <a href="https://selab.hanyang.ac.kr/research/">RESEARCH</a>
+                </li>
+                <li class="nav-button">
+                    <a href="https://selab.hanyang.ac.kr/publications/">PUBLICATIONS</a>
+                </li>
+                <li class="nav-button">
+                    <a href="html/courses.html">COURSES</a>
+                </li>
+                <li class="nav-button">
+                    <a href="gallery.html">GALLERY</a>
+                </li>
+
+
+            </ul>
+            <span id="hideshow" style="visibility: hidden;">
+                <img src="../img/menuicon.png" id="menuicon">
+            </span>
+
+        </nav>
+
+    </header>
+    <div class="album">
+        <div class="all">
+            <h1>All</h1>
+            <div id="hl"></div>
+            <div class="carousel">
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_20170113_125937985.jpg">KSCI 2017</a>
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_20170113_125748315.jpg">KSCI 2017</a>
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_20170113_125722733.jpg">KSCI 2017</a>
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/20161221_131538-1.jpg">ICCCA 2016 Busan</a>
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/2016-07-25%2012.25.28.jpg">회식</a>
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/2016-07-28%2014.48.46.jpg">일상</a>
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/2015-12-20%2017.39.26.jpg">KCC</a>
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_20161013_161859066.jpg">Gayeon's Birthday</a>
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_20161103_200248538.jpg">Lab Dinner November</a>
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_20160714_200728318.jpg">ICISCA Conference 16 July
+                    2016 Thailand</a>
+                <a class="carousel-item"><img src="../imgs/1421654364774.jpeg">Happy Birthday Prof!</a>
+                <a class="carousel-item"><img src="../imgs/20160707_173320.jpg">Twins</a>
+                <a class="carousel-item"><img src="../imgs/20160504_174227.jpg">Twins Birthday</a>
+                <a class="carousel-item"><img src="../imgs/20160303_122313.jpg">SELEB-Lunch</a>
+                <a class="carousel-item"><img src="../imgs/20151217_144926.jpg">KCC Winter 2015</a>
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_20151218_131111742.jpg">KCC Winter 2015</a>
+                <a class="carousel-item"><img src="../imgs/DSC_0093.JPG">KCC Winter 2015-Rahim Presentation Paper</a>
+                <a class="carousel-item"><img src="../imgs/DSC_0114.JPG">KCC Winter 2015</a>
+                <a class="carousel-item"><img src="../imgs/DSC_0081.JPG">KCC Winter2015-Zhiqiang</a>
+                <a class="carousel-item"><img src="../imgs/20151217_125809.jpg">KCC Winter COnference 2015-Lunch</a>
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_Photo_2016-07-07-17-07-51.jpeg">SeonWoong
+                    Birthday</a>
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_Photo_2016-07-07-17-07-46.jpeg">Lab Lunch</a>
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_20150913_214113133.jpg">Lab Lunch(14 September
+                    2015)</a>
+                <a class="carousel-item"><img src="../imgs/image.jpg">Lab Lunch</a>
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_20150701_002505992.jpg">KCC 2015 SeonWoong</a>
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_20150701_002517046.jpg">KCC 2015 Seonwoong</a>
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_20150701_002517777.jpg">KCC 2105 Seonwoong</a>
+                <a class="carousel-item"><img src="../imgs/img2.jpeg">KCC2015 Asad</a>
+                <a class="carousel-item"><img src="../imgs/img.jpeg">KC2015 Asad and Isam</a>
+                <a class="carousel-item"><img src="../imgs/Bandphoto_2014_05_14_13_31_06.jpg">Beer with Chips and
+                    People:-)</a>
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_20140513_124247945.jpg">절대 누구라고는 말 안했음... Who are
+                    you?</a>
+                <a class="carousel-item"><img src="../imgs/IMG_4923.JPG">KSCE 2014 Presentation</a>
+                <a class="carousel-item"><img src="../imgs/IMG_4772.JPG">KCSE 2014 Presentation</a>
+                <a class="carousel-item"><img src="../imgs/IMG_7602.JPG">호수공원</a>
+                <a class="carousel-item"><img src="../imgs/IMG_7584.JPG">Plz, arrest him!!!!Crazy guy on the Lio</a>
+                <a class="carousel-item"><img src="../imgs/IMG_7586.JPG">All mems In front of Lion Status</a>
+                <a class="carousel-item"><img src="../imgs/KakaoTalk_3f852c70fb6f4ca3.jpg">Happy Birthday!!:-)</a>
+                <a class="carousel-item"><img src="../imgs/IMG_1109.JPG">KCSE 2014 Pheonix Park</a>
+                <a class="carousel-item"><img src="../imgs/IMG_1164.JPG">Dinnner February 2014</a>
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/20130628_121943.jpg">숨막히는
+                    뒤태~~~오후훗</a>
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/IMG_1716.JPG">뭐가 그리
+                    좋을꼬??누가 그리 좋을꼬?ㅋㅋ</a>
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/IMG_2197.JPG">회식</a>
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/IMG_2335.JPG">나는 지금 총을 쏘는
+                    아니야!!!</a>
+                <a class="carousel-item"><img src="../imgs/20130628_121831.jpg">공허함의끝은 발표</a>
+                <a class="carousel-item"><img src="../imgs/jaejin.png">졸업생의 비애</a>
+                <a class="carousel-item"><img src="../imgs/IMG_1794.JPG">종합학술대회(여수)</a>
+            </div>
+        </div>
+        <div class="social">
+            <h1>Social Activity</h1>
+            <div id="hl"></div>
+            <div class="carousel">
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/2016-07-25%2012.25.28.jpg">회식</a>
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/2016-07-28%2014.48.46.jpg">
+                    <일상/a> <a class="carousel-item"><img
+                            src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20161013_161859066.jpg">Hayeon's
+                        Birthday
+                </a>
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20161103_200248538.jpg">Lab Dinner
+                    November 2016</a>
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/20160303_122313.jpg">SELAB-Lunch</a>
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/20151217_144926.jpg">KCC
+                    Winter 2015</a>
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20151218_131111742.jpg">KCC Winter
+                    2015</a>
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/20151217_125809.jpg">KCC
+                    WINTER Conference</a>
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_Photo_2016-07-07-17-07-51.jpeg">SeonWoong
+                    Birthday</a>
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_Photo_2016-07-07-17-07-46.jpeg">Lab
+                    Lunch</a>
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20150913_214113133.jpg">Lab Lunch(14
+                    September 2015)</a>
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/image.jpg">Lab Lunch</a>
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/Bandphoto_2014_05_14_13_31_06.jpg">Beer with
+                    Chips and People :-)</a>
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/IMG_7602.JPG">호수공원</a>
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/IMG_7584.JPG">Plz, arrest
+                    him!!!! Crazy guy on the Lio</a>
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/IMG_7586.JPG">All mems In
+                    front of Lion Statue</a>
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_3f852c70fb6f4ca3.jpg">Happy
+                    Birthday!!:-)</a>
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/IMG_1164.JPG">Dinner
+                    February 2014</a>
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/IMG_1716.JPG">뭐가 그리 좋을꼬??
+                    누가 그리 좋을꼬? ㅋㅋ</a>
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/IMG_2335.JPG">나는 지금 총을 쏘는게
+                    아니야!!!</a>
+            </div>
+        </div>
+        <div class="conference">
+            <h1>Conference</h1>
+            <div id="hl"></div>
+            <div class="carousel">
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20170113_125937985.jpg">KSCI 2017</a>
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20170113_125748315.jpg">KSCI 2017</a>
+
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20170113_125722733.jpg">KSCI 2017</a>
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/20161221_131538-1.jpg">ICCCA 2016 Busan</a>
+
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/2015-12-20%2017.39.26.jpg">KCC</a>
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20160714_200728318.jpg">ISISCA
+                    Conference 16 July 2016 Thailand</a>
+
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/DSC_0093.JPG">KCC Winter
+                    2015-Rahim Presenting Paper</a>
+
+
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/DSC_0114.JPG">KCC Winter
+                    2015</a>
+
+
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/DSC_0081.JPG">KCC
+                    Winter2015-Zhiqiang</a>
+
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20150701_002505992.jpg">KCC 2015
+                    Seonwoong</a>
+
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20150701_002517046.jpg">KCC 2015
+                    Seonwoong</a>
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20150701_002517777.jpg">KCC 2015
+                    Seonwoong</a>
+
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/img2.jpeg">KCC 2015
+                    Asad</a>
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20150701_002517046.jpg">KCC 2015 Asad
+                    and Isma</a>
+
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20150701_002517046.jpg">KCC 2014
+                    presentation</a>
+
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20150701_002517046.jpg">KCC 2014
+                    presentation</a>
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20150701_002517046.jpg">KCSE 2014
+                    Pheonix Park</a>
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20150701_002517046.jpg">공허함의 끝은 발표</a>
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20150701_002517046.jpg">졸업생의 비애</a>
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20150701_002517046.jpg">종합학수대수(여수)</a>
+
+
+            </div>
+        </div>
+        <div class="etc">
+            <h1>Etc</h1>
+            <div id="hl"></div>
+            <div class="carousel">
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/1421654364774.jpeg">Happy
+                    Birthday Prof!</a>
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/20160707_173320.jpg">Twins-2</a>
+
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/20160504_174227.jpg">Twins
+                    Birthday</a>
+
+                <a class="carousel-item"><img
+                        src="https://selab.hanyang.ac.kr/gallery/images/KakaoTalk_20140513_124247945.jpg">절대 누구라고는 말
+                    안했음... Who are you?</a>
+
+
+                <a class="carousel-item"><img src="https://selab.hanyang.ac.kr/gallery/images/20130628_121943.jpg">숨막히는
+                    뒤태~~~ 오후훗</a>
+
+            </div>
+        </div>
     </div>
-    <ul>
-      <li class="nav-button">
-        <a href="html/notice.html">NOTICE</a>
-      </li>
-      <li class="nav-button">
-        <a href="https://selab.hanyang.ac.kr/members/">MEMBERS</a>
-      </li>
-      <li class="nav-button">
-        <a href="https://selab.hanyang.ac.kr/research/">RESEARCH</a>
-      </li>
-      <li class="nav-button">
-        <a href="https://selab.hanyang.ac.kr/publications/">PUBLICATIONS</a>
-      </li>
-      <li class="nav-button">
-        <a href="html/courses.html">COURSES</a>
-      </li>
-      <li class="nav-button">
-        <a href="html/gallery.html">GALLERY</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-<p>This is Gallery</p>
 
+    <!--JavaScript at end of body for optimized loading-->
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel();
+            // $('.materialboxed').materialbox();
+        });
+
+        // Or with jQuery
+
+        $('.carousel.carousel-slider').carousel({
+            // fullWidth: true,
+            indicators: true
+        });
+    </script>
+    <script src="../js/main.js" type="text/javascript"></script>
 </body>
+
 </html>

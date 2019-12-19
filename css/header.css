@@ -2,10 +2,15 @@ header{
   border: 1px solid black;
   overflow: auto;
   width: 1145px;
+  margin-left:auto;
+  margin-right:auto;
 }
 nav a{
   float: left;
   visibility: visible;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding:0;
 }
 nav img  {
   background-color: black;
@@ -16,6 +21,7 @@ nav{
   height: 60px;
   background-color: black;
   overflow: hidden;
+  line-height: unset;
 }
 nav ul{
   float: left;
@@ -44,6 +50,17 @@ nav ul a{
 
 #hideshow{
   float:right;
+}
+
+nav ul a{
+ padding-left:2px;
+ padding-right:2px;
+}
+
+#menuicon{
+  height:45px;
+  padding-top:15px;
+  padding-right:15px;
 }
 @media (max-width:1145px){
 
