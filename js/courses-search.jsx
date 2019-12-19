@@ -81,7 +81,7 @@ class App extends React.Component {
         <h1>Hi</h1>
       </form>
     )
-  }
+  };
 
   render() {
     if (this.state.data) {
