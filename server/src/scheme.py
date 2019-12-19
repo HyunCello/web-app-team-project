@@ -3,6 +3,7 @@ from graphene_sqlalchemy import SQLAlchemyConnectionField, SQLAlchemyObjectType
 
 from src.models import *
 from src.database import db_session
+import flask_praetorian
 from flask_praetorian import Praetorian
 
 guard = Praetorian()
@@ -18,6 +19,7 @@ class CreateUser(graphene.Mutation):
   username = graphene.String()
   rolenames = graphene.String()
   is_active = graphene.Boolean()
+  password = graphene.String()
 
   class Arguments:
     username = graphene.String()
@@ -25,30 +27,44 @@ class CreateUser(graphene.Mutation):
     rolenames = graphene.String()
     is_active = graphene.Boolean()
 
-  def mutate(self, info, username, rolenames, password, is_active):
+  def mutate(self, info, username, password, rolenames, is_active):
+    password = guard.hash_password(password)
     user = User(username=username,
-                password=guard.hash_password(password),
+                password=password,
                 rolenames=rolenames,
                 is_active=is_active)
     add(user)
 
     return CreateUser(username=username,
                       rolenames=rolenames,
-                      is_active=is_active)
+                      is_active=is_active,
+                      password=password)
 
 
 class CreateComment(graphene.Mutation):
+  id = graphene.Int()
   content = graphene.String()
-  registered_data = graphene.Date()
+  registered_date = graphene.Date()
+  problem_id = graphene.Int()
 
   class Arguments:
     content = graphene.String()
-    registered_data = graphene.Date()
+    username = graphene.String()
+    password = graphene.String()
+    problem_id = graphene.Int()
 
-  def mutate(self, info, content, registered_data):
-    comment = Comment(content=content, registered_data=registered_data)
+  def mutate(self, info, content, username, password, problem_id):
+    comment = Comment(content=content,
+                      username=username,
+                      password=password,
+                      problem_id=problem_id)
+
+    registered_date = comment.registered_date
     add(comment)
-    return CreateComment(content=content, registered_data=registered_data)
+    return CreateComment(content=content,
+                         username=username,
+                         registered_date=registered_date,
+                         problem_id=problem_id)
 
 
 class CreateProblem(graphene.Mutation):
@@ -60,11 +76,13 @@ class CreateProblem(graphene.Mutation):
     title = graphene.String()
     content = graphene.String()
     due_date = graphene.Date()
+    access_token = graphene.String()
 
-  def mutate(self, info, title, content, due_date):
+  @flask_praetorian.auth_required
+  def mutate(self, info, title, content, due_date, access_token):
     problem = Problem(title=title, content=content, due_date=due_date)
     add(problem)
-    return CreateComment(title=title, content=content, due_date=due_date)
+    return CreateProblem(title=title, content=content, due_date=due_date)
 
 
 class GetUserToken(graphene.Mutation):
@@ -77,6 +95,7 @@ class GetUserToken(graphene.Mutation):
   def mutate(self, info, username, password):
     user = guard.authenticate(username, password)
     access_token = guard.encode_jwt_token(user)
+    print(access_token)
     return GetUserToken(access_token=access_token)
 
 
@@ -128,4 +147,6 @@ class Mutation(graphene.ObjectType):
   get_user_token = GetUserToken.Field()
 
 
-schema = graphene.Schema(query=Query, mutation=Mutation, types=[UserType])
+schema = graphene.Schema(query=Query,
+                         mutation=Mutation,
+                         types=[UserType, ProblemType, CommentType])

@@ -52,7 +52,7 @@ class App extends React.Component {
     let keyword = document.getElementsByClassName('keyword').item(0).value;
     console.log(keyword);
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:5000/api?msg=' + keyword);
+    xhr.open('GET', 'http://35.206.218.100:5000/api?msg=' + keyword);
     xhr.onload = () => {
       if (xhr.status === 200) {
         let parseElement = JSON.parse(xhr.responseText)['data'];
@@ -89,14 +89,14 @@ class App extends React.Component {
 
         <div>
           <input className={'keyword'} onFocus={this.onFocus} onBlur={this.onBlur} onChange={this.searchKeyword}/>
-        {this.state.data.map((value) => {
-          let title = value['title'][0];
-          let text = value['text'][0];
-          let code = value['code'][0];
+          {this.state.data.map((value) => {
+            let title = value['title'][0];
+            let text = value['text'][0];
+            let code = value['code'][0];
 
-          return <Result title={title} text={text} code={code}/>
-        })
-        }</div>
+            return <Result title={title} text={text} code={code}/>
+          })
+          }</div>
       );
 
     }

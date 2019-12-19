@@ -11,6 +11,13 @@ class User(Base):
   rolenames = Column(String)
   is_active = Column(Boolean, default=True)
 
+  # @property
+  # def rolenames(self):
+  #   try:
+  #     return self.rolenames
+  #   except Exception:
+  #     return []
+
   @classmethod
   def lookup(cls, username):
     return cls.query.filter_by(username=username).one_or_none()
@@ -18,6 +25,13 @@ class User(Base):
   @classmethod
   def identify(cls, id):
     return cls.query.get(id)
+
+  # @property
+  # def identity(self):
+  #   return self.identity
+
+  def is_valid(self):
+    return self.is_active
 
 
 class Comment(Base):
