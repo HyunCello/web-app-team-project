@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="../css/header.css">
 
   <meta name="theme-color" content="#fafafa">
-  <script src="/Users/baekseungmin/Desktop/webAppTeample/web-app-team-project/js/courses.js" type="text/javascript"></script>
+  <script src="../js/courses.js" type="text/javascript"></script>
 
 
   <!--  Prototype.js -->
@@ -419,10 +419,10 @@
 <!-- ////////////////////////// -->
       <div id="question" class="display_none">
         <div id="create_question">
-          <button  id="make_question" onclick="MakeQuestion()">New 1%</button>
+          <button  id="make_question">ADD</button>
         </div>
 
-        <div class="wrap-subcontent" >
+        <div class="wrap-subcontent">
           <div class="question">
             <h3>Week 10th Question</h3>
             <p id="10thQuest">Queston 10th</p>
@@ -485,6 +485,25 @@
 		</div>
 	</div>
 </main>
+
+  <div class="modal-make-question-wrap hide">
+    <div class="modal-make-question-content">
+      <div class="modal-header">
+        <h1>Register Quest!</h1>
+      </div>
+      <div class="modal-body">
+        <input type="text" class="type-title" placeholder="Write title">
+        <span class="wrap-quest-deadline">
+          <label for="type-quest-deadline">Deadline</label>
+          <input type="datetime-local" id="type-quest-deadline" value="2019-12-01T12:00">
+        </span>        
+        <textarea class="type-quest-content"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-quest-submit">Register!</button>
+      </div>
+    </div>
+  </div> 
 
 	<footer role="contentinfo">
 		<div class="container">

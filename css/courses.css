@@ -94,5 +94,99 @@ button {
 
 #make_question {
   width: 100px;
-    height: 40px;
+  height: 40px;
+
+  color: white;
+  border: 0;
+  font-weight: normal;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 5px;
+  background-color: rgb(112, 200, 233);
+  outline: none;
+}
+
+.modal-make-question-wrap {   
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;  
+  z-index: 100;
+}
+
+.modal-make-question-wrap.hide {
+  display: none !important;
+}
+
+.modal-make-question-wrap.show {
+  display: flex !important;
+}
+
+@keyframes modal-up {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.modal-make-question-content {
+  display: grid;
+  grid-template-rows: 50px auto 50px;
+
+  background-color: white;
+  width: 500px;
+  height: 450px;
+  border-radius: 5px;  
+
+  animation: modal-up 0.6s ease;
+}
+
+.modal-header {
+  position: relative;
+}
+
+.modal-header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.modal-body {
+  display: grid;
+  grid-template-rows: 30px 30px 200px;
+  grid-gap: 20px;
+}
+
+.type-title {
+  padding-left: 10px;
+}
+
+#type-quest-deadline {
+  margin-left: 20px;
+}
+
+.type-quest-content {
+  resize: none;
+}
+
+div.modal-footer {
+  padding: 10px;
+}
+
+.modal-footer button {
+  width: 100px;
+  height: 30px;
+  color: white;
+  border: 0;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  background-color: rgb(112, 200, 233);
+  outline: none;
 }
