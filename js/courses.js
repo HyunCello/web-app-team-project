@@ -88,4 +88,4 @@ document.addEventListener(`DOMContentLoaded`, () => {
         // 민혁이에게 새로운 질문이 등록됨을 알려주고, 리스트 새로갱신
 
     })
-})    
+})

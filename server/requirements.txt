@@ -1,0 +1,10 @@
+flask
+flask-restplus
+flask-cors
+lxml
+selenium
+sqlalchemy
+flask-praetorian
+flask-graphql
+graphene
+graphene_sqlalchemy
