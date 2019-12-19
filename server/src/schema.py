@@ -17,26 +17,26 @@ def add(x):
 
 class CreateUser(graphene.Mutation):
   username = graphene.String()
-  rolenames = graphene.String()
+  roles = graphene.List(graphene.String)
   is_active = graphene.Boolean()
   password = graphene.String()
 
   class Arguments:
     username = graphene.String()
     password = graphene.String()
-    rolenames = graphene.String()
+    roles = graphene.List(graphene.String)
     is_active = graphene.Boolean()
 
-  def mutate(self, info, username, password, rolenames, is_active):
+  def mutate(self, info, username, password, roles, is_active):
     password = guard.hash_password(password)
     user = User(username=username,
                 password=password,
-                rolenames=rolenames,
+                roles=roles,
                 is_active=is_active)
     add(user)
 
     return CreateUser(username=username,
-                      rolenames=rolenames,
+                      roles=roles,
                       is_active=is_active,
                       password=password)
 
@@ -81,7 +81,7 @@ class CreateProblem(graphene.Mutation):
     due_date = graphene.Date()
     access_token = graphene.String()
 
-  @flask_praetorian.auth_required
+  @flask_praetorian.roles_accepted('admin')
   def mutate(self, info, title, content, due_date, access_token):
     problem = Problem(title=title, content=content, due_date=due_date)
     add(problem)
