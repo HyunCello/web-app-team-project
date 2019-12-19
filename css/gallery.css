@@ -32,4 +32,7 @@ h1{
 
     
 }
-  
+.carousel{
+    transform: scale(1.6) translateX(-50%);
+    left: 50%;
+}
