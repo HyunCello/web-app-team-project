@@ -45,7 +45,7 @@ nav ul a{
 #hideshow{
   float:right;
 }
-@media (max-width:1000px){
+@media (max-width:1145px){
 
   header{
     border: 1px solid black;
