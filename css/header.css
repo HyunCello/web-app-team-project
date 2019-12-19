@@ -8,8 +8,8 @@ header{
 nav a{
   float: left;
   visibility: visible;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
   padding:0;
 }
 nav img  {
@@ -21,7 +21,9 @@ nav{
   width:1145px;
   background-color: black;
   overflow: hidden;
-  line-height: unset;
+  line-height: initial;
+  margin-left:auto;
+  margin-right:auto;
   border-radius: 0px 0px 5px 5px;
 }
 nav ul{
