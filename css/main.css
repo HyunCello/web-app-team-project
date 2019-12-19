@@ -24,7 +24,10 @@ table, tr, td{
   border-collapse:collapse;
 }
 
-@media (max-width:1000px){
+#mainpic{
+  width:100%;
+}
+@media (max-width:1145px){
 
   body {
     margin: 0;

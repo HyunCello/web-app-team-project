@@ -22,7 +22,7 @@ nav ul{
   margin:0;
   padding:0;
   text-align:left;
-  width:800px;  
+  width:800px;
 }
 nav ul a{
   font-size: 20px;
@@ -36,7 +36,7 @@ nav ul a{
   margin-top:20px;
   vertical-align: top;
   display: inline-block;
-  
+
 }
 .nav-button:hover{
   background-color: rgba(57, 57, 88, 0.9);
@@ -45,7 +45,7 @@ nav ul a{
 #hideshow{
   float:right;
 }
-@media (max-width:1000px){
+@media (max-width:1145px){
 
   header{
     border: 1px solid black;
