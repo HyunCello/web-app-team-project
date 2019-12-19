@@ -8,13 +8,11 @@ class Result extends React.Component {
     return (
       <div className={"result"}>
         <h3><a href={this.props.href}>{this.props.title}</a></h3>
-        <h4><span>- code</span></h4>
         <div className={"result-box"}>
           <div className={"code"}>
             <span>{this.props.code}</span>
           </div>
         </div>
-        <h4><span>- text</span></h4>
         <div className={"result-box"}>
           <div className={"text"}>
             <span>{this.props.text}</span>
@@ -42,6 +40,9 @@ class App extends React.Component {
   };
 
   onBlur = () => {
+    this.setState({
+      data: null
+    });
     document.getElementById('main').style.visibility = 'visible'
     // document.getElementById('tab').style.visibility = 'visible'
 

@@ -4,9 +4,6 @@ main{
   margin-left:auto;
 }
 
-
-
-
 .search-bar {
   text-align: center;
 }
@@ -15,12 +12,12 @@ main{
   display: inline-block;
   height: 50px;
   margin: 10px;
-  border: 1px solid red;
+  border: 1px solid black;
   text-align: center;
 }
 
 .search-bar input:focus {
-  background-color: yellow;
+
 }
 
 .search-bar #msg {
@@ -31,12 +28,14 @@ main{
 }
 
 .result {
+  border: 1px solid darkgray;
+  border-radius: 5px;
   text-align: left;
   padding: 10px;
+  margin: 5px
 }
 
 .result h3 {
-  background-color: lightblue;
   font-size: xx-large;
   font-weight: bold;
   color: black;
@@ -45,20 +44,19 @@ main{
 }
 
 .result h4 span{
-  background-color: blanchedalmond;
-  border-radius: 20px;
   margin: 5px;
+  padding: 4px;
   color: black;
 }
 .result span {
-  background-color: yellow;
-  border-radius: 20px;
+  /*border-radius: 20px;*/
   color: black;
 }
-
+.result-box {
+  background-color: rgb(232, 217, 249);
+}
 .result .code {
   margin: 10px;
-  color: #00abd9;
 }
 
 .result .text {

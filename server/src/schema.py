@@ -46,7 +46,7 @@ class CreateComment(graphene.Mutation):
   username = graphene.String()
   password = graphene.String()
   content = graphene.String()
-  registered_date = graphene.Date()
+  registered_date = graphene.Time()
   problem_id = graphene.Int()
 
   class Arguments:
@@ -81,7 +81,7 @@ class CreateProblem(graphene.Mutation):
     due_date = graphene.Date()
     access_token = graphene.String()
 
-  @flask_praetorian.roles_accepted('admin')
+  # @flask_praetorian.roles_accepted('admin')
   def mutate(self, info, title, content, due_date, access_token):
     problem = Problem(title=title, content=content, due_date=due_date)
     add(problem)
