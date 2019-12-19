@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="../css/header.css">
 
   <meta name="theme-color" content="#fafafa">
-  <script src="/Users/baekseungmin/Desktop/webAppTeample/web-app-team-project/js/courses.js" type="text/javascript"></script>
+  <script src="../js/courses.js" type="text/javascript"></script>
 
 
   <!--  Prototype.js -->
@@ -53,9 +53,9 @@
     </div>
     <ul>
       <li class="nav-button">
-        <a href="html/notice.html">NOTICE</a>
+        <a href="../html/notice.html">NOTICE</a>
       </li>
-      <li class="nav-button">
+      <li class="../nav-button">
         <a href="https://selab.hanyang.ac.kr/members/">MEMBERS</a>
       </li>
       <li class="nav-button">
@@ -65,10 +65,10 @@
         <a href="https://selab.hanyang.ac.kr/publications/">PUBLICATIONS</a>
       </li>
       <li class="nav-button">
-        <a href="html/courses.html">COURSES</a>
+        <a href="../html/courses.html">COURSES</a>
       </li>
       <li class="nav-button">
-        <a href="html/gallery.html">GALLERY</a>
+        <a href="../html/gallery.html">GALLERY</a>
       </li>
     </ul>
   </nav>
@@ -429,22 +429,22 @@
           </div>
 
           <div class="commentsect">
-            <p>comments</p>
             <div class="comments">
 
               <div class="comment_format">
                 <form action="" method="post">
                   <div class="field"><input type="text" placeholder="Enter name" name="id">
-                  <input type="password" placeholder="Enter password" name="password"></div>
-                  <textarea rows="4" cols="30" placeholder="Your comment" name="new_comment" id="new_comment"></textarea>
-                  <button type="submit">Leave comment</button>
+                  <input type="password" placeholder="Enter password" name="password">
+                <span>comments</span></div>
+                  <textarea rows="4" cols="30" placeholder="Your comment" name="comment" id="comment"></textarea>
+                  <div class="submit"><button type="submit" class="leave_comment">Leave comment</button></div>
                 </form>
               </div>
 
               <div class="comment_list">
                 <ul>
-                  <li >가나다라</li>
-                  <li >마바사아자차카</li>
+                  <li>가나다라</li>
+                  <li>마바사아자차카</li>
                 </ul>
               </div>
 
@@ -460,13 +460,12 @@
             <p id="9thQuest">Queston 9th</p>
           </div>
 
-          <div id="commentsect">
-            <p>comments</p>
+          <div class="commentsect">
               <div class="comments">
                 <div class="comment_list">
                   <ul>
-                    <li id="comment_first">이걸사용하면 되지 않을까요오옷</li>
-                    <li id="comment_scond">마하반야다라심경 반자재 보살</li>
+                    <li>이걸사용하면 되지 않을까요오옷</li>
+                    <li>마하반야다라심경 반자재 보살</li>
                   </ul>
                 </div>
               </div>

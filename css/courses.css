@@ -59,12 +59,12 @@ font-size: 30px;
 
 #question li{
   margin: 13px 0;
-  margin-left: 30px;
+  margin-left: 0px;
 
 }
 
 #question ol, #question ul{
-  margin-left: 30px;
+  margin-left: 0px;
   margin-bottom: 20px;
 
 }
@@ -83,8 +83,8 @@ font-size: 30px;
 }
 
 .comment_list li {
-  border-top: 1px solid;
-  border-bottom: 1px solid;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 button {
@@ -95,4 +95,38 @@ button {
 #make_question {
   width: 100px;
     height: 40px;
+}
+
+.commentsect {
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.field {
+  margin-bottom: 8px;
+}
+.field input {
+  height: 30px;
+  width: 15%;
+  margin-right: 6px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid;
+}
+
+#comment {
+  width: 100%;
+}
+
+.leave_comment {
+  height: 30px;
+  width: 15%;
+}
+
+.comment_list ul li {
+  list-style: none;
 }
