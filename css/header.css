@@ -1,28 +1,64 @@
 header{
-  margin-left: 20px;
-  margin-right: 20px;
   border: 1px solid black;
-  overflow: hidden;
+  overflow: auto;
+  width: 1145px;
 }
-#logo {
+nav a{
+  float: left;
+  visibility: visible;
+}
+nav img  {
   background-color: black;
   border: 2px solid black;
-  float: left;
   margin:0;
 }
 nav{
-  height: 30px;
+  height: 60px;
+  background-color: black;
+  overflow: hidden;
 }
-nav ul {
-  margin: 0;
+nav ul{
+  float: left;
+  margin:0;
+  padding:0;
+  text-align:left;
+  width:800px;
 }
 nav ul a{
-  font-size: 25px;
+  font-size: 20px;
+  color:white;
+  text-decoration: unset;
+  margin-left:2px;
+  margin-right:2px;
 }
+
 .nav-button {
+  margin-top:20px;
+  vertical-align: top;
   display: inline-block;
-  text-decoration: none;
+
 }
 .nav-button:hover{
   background-color: rgba(57, 57, 88, 0.9);
+}
+
+#hideshow{
+  float:right;
+}
+@media (max-width:1145px){
+
+  header{
+    border: 1px solid black;
+    overflow: auto;
+    width: auto;
+  }
+
+  li a{
+    width:0;
+    visibility: hidden;
+  }
+  #showhide{
+    width:30px;
+  }
+
 }
