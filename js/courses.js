@@ -1,8 +1,10 @@
 CountDownTimer('12/23/2019, 20:37:00', '10thQuest'); // 월_일_년
 
-CountDownTimer('12/12/2019, 17:30:00', '9thQuest'); // 월_일_년 , 시간
-
 CountDownTimer('12/5/2019, 17:30:00', '8thQuest'); // 월_일_년 , 시간
+
+window.onload = function() {
+    MakeQuestion();
+}
 
 function CountDownTimer(dt, id) 
 {
@@ -87,4 +89,3 @@ document.addEventListener(`DOMContentLoaded`, () => {
 
     })
 })    
-
