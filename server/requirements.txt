@@ -8,3 +8,6 @@ flask-praetorian
 flask-graphql
 graphene
 graphene_sqlalchemy
+cssselect
+requests
+psycopqg2
