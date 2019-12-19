@@ -1,12 +1,12 @@
 function myFunction(DefineSize) {
     if (DefineSize.matches) { // If media query matches
         hide();
-        //console.log("hide")
+        console.log("hide")
       //ocument.body.style.backgroundColor = "yellow";
     } else {
         
         show();
-        //console.log("show")
+        console.log("show")
       //document.body.style.backgroundColor = "pink";
     }
   }
@@ -40,3 +40,9 @@ var DefineSize = window.matchMedia("(max-width: 1145px)")
 myFunction(DefineSize) // Call listener function at run time
 DefineSize.addListener(myFunction) // Attach listener function on state changes
 
+function openNav(){  /*style의 크기를 30%로 변경*/
+  document.getElementById("myTopnav").style.height = "25%";
+}
+function closeNav(){ /*style의 크기를 0으로 변경*/
+  document.getElementById("myTopnav").style.height = "0";
+}
