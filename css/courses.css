@@ -1,3 +1,78 @@
 body {
   background-color: aquamarine;
 }
+
+#question{
+  width: 1145px;
+  margin: 0 auto;
+}
+
+#question a{
+  color: rgb(0, 113, 216);
+}
+
+#question a:hover{
+  color: rgb(255, 103, 103);
+}
+
+
+#question .wrap-subcontent{
+  background-color: white;
+
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+h1{
+  margin-bottom: 15px !important;
+}
+
+#question h2, #question h3, #question h4, #question p, #question li{
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-family: Tahoma, Arial, sans-serif;
+
+}
+
+#question p{
+  padding-left: 15px;
+}
+
+#question h2 {
+color: rgb(156, 156, 156);
+margin: 10px 0;
+font-weight: bold;
+font-size: 30px;
+}
+
+#question h3, #question h4 {
+  font-size: 20px;
+  font-weight: 100;
+  width: 100%;
+  padding-left: 10px;
+
+  background-color:rgb(211, 237, 245);
+  color: black;
+  line-height: 52px;
+  height: 52px;
+}
+
+#question li{
+  margin: 13px 0;
+  margin-left: 30px;
+
+}
+
+#question ol, #question ul{
+  margin-left: 30px;
+  margin-bottom: 20px;
+
+}
+
+#question .last{
+  margin-bottom: 100px;
+}
+
+#question ul{
+  list-style-image: url("/courses/images/list-img.png");
+}
