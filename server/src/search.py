@@ -56,12 +56,12 @@ def search(msg: str) -> list:
     return text.replace(' ', '').lower()
 
   for each in data:
-    keys = ['title', 'text', 'category', 'code']
+    keys = ['title', 'text', 'category', 'code', 'href']
 
     rank = defaultdict()
     for key in keys:
       value = each[key]
-      if key == 'category':
+      if key == 'category' or key == 'href':
         rank[key] = value
         continue
 
