@@ -10,92 +10,111 @@
   <link rel="manifest" href="../site.webmanifest">
   <link rel="apple-touch-icon" href="../icon.png">
   <!-- Place favicon.ico in the root directory -->
+  
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/courses_orig.css">
-  <link rel="stylesheet" href="../css/courses.css">
-  <link rel="stylesheet" href="../css/header.css">
+  
 
   <meta name="theme-color" content="#fafafa">
 
   <!--  Prototype.js -->
   <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
-<!--  -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
-	<link rel="stylesheet" href="https://selab.hanyang.ac.kr/common/styles/reset-1.6.1.css" type="text/css" />
-	<link rel="stylesheet" href="https://selab.hanyang.ac.kr/common/styles/jquery-ui.css" type="text/css" />
-	<link rel="stylesheet" href="https://selab.hanyang.ac.kr/common/styles/font-awesome-4.0.3/css/font-awesome.min.css" type="text/css" />
-	<link rel="stylesheet" href="https://selab.hanyang.ac.kr/common/styles/common.css" type="text/css" />
-	<link rel="shortcut icon" href="https://selab.hanyang.ac.kr/common/images/SelabFavicon.png" type="image/png">
-			<link rel="stylesheet" href="https://selab.hanyang.ac.kr/courses/styles/course-home.css" type="text/css" />
-				<link rel="stylesheet" href="https://selab.hanyang.ac.kr/courses/styles/course-slides.css" type="text/css" />
-		
-	<script type="text/javascript" src="https://selab.hanyang.ac.kr/common/scripts/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="https://selab.hanyang.ac.kr/common/scripts/jquery-ui.js"></script>
-	<script type="text/javascript" src="https://selab.hanyang.ac.kr/common/scripts/buffered-keyup.js"></script>
-	<script type="text/javascript" src="https://selab.hanyang.ac.kr/common/scripts/common.js"></script>
-			<script type="text/javascript" src="https://selab.hanyang.ac.kr/courses/scripts/course-page.js"></script>
-<!--  -->
+  <!--  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://selab.hanyang.ac.kr/common/styles/reset-1.6.1.css" type="text/css" />
+  <link rel="stylesheet" href="https://selab.hanyang.ac.kr/common/styles/jquery-ui.css" type="text/css" />
+  <link rel="stylesheet" href="https://selab.hanyang.ac.kr/common/styles/font-awesome-4.0.3/css/font-awesome.min.css"
+    type="text/css" />
+  <link rel="stylesheet" href="https://selab.hanyang.ac.kr/common/styles/common.css" type="text/css" />
+  <link rel="shortcut icon" href="https://selab.hanyang.ac.kr/common/images/SelabFavicon.png" type="image/png">
+  <link rel="stylesheet" href="https://selab.hanyang.ac.kr/courses/styles/course-home.css" type="text/css" />
+  <link rel="stylesheet" href="https://selab.hanyang.ac.kr/courses/styles/course-slides.css" type="text/css" />
+
+  <script type="text/javascript" src="https://selab.hanyang.ac.kr/common/scripts/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://selab.hanyang.ac.kr/common/scripts/jquery-ui.js"></script>
+  <script type="text/javascript" src="https://selab.hanyang.ac.kr/common/scripts/buffered-keyup.js"></script>
+  <script type="text/javascript" src="https://selab.hanyang.ac.kr/common/scripts/common.js"></script>
+  <script type="text/javascript" src="https://selab.hanyang.ac.kr/courses/scripts/course-page.js"></script>
+  <!--  -->
   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <link rel="stylesheet" href="../materialize/css/materialize.min.css">
+  <link rel="stylesheet" href="../css/courses.css">
+
+  <link rel="stylesheet" href="../css/header.css">
 </head>
 
 <body>
-<!--[if IE]>
+  <!--[if IE]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
   your browser</a> to improve your experience and security.</p>
 <![endif]-->
 
-<!-- Add your site or application content here -->
-<nav>
-  <div id="logo">
-    <a href="../index.html"><img src="../selab_logo_S.png" alt="logo"></a>
-  </div>
-  <ul>
-    <li class="nav-button">
-      <a href="../html/members.html">MEMBERS</a>
-    </li>
-    <li class="nav-button">
-      <a href="../html/courses.html">COURSES</a>
-    </li>
-    <li class="nav-button">
-      <a href="../html/gallery.html">GALLERY</a>
-    </li>
-  </ul>
-</nav>
-<div class="container">
-  <div class="contents">
-    <div id="hl"></div>
+  <!-- Add your site or application content here -->
+  <header>
+    <nav>
+      <a href="../index.html"><img src="../selab_logo_S.png" alt="logo"></a>
+      <ul id="showhide">
 
-    
+        <li class="nav-button">
+          <a href="html/notice.html">NOTICE</a>
+        </li>
+        <li class="nav-button">
+          <a href="https://selab.hanyang.ac.kr/members/">MEMBERS</a>
+        </li>
+        <li class="nav-button">
+          <a href="https://selab.hanyang.ac.kr/research/">RESEARCH</a>
+        </li>
+        <li class="nav-button">
+          <a href="https://selab.hanyang.ac.kr/publications/">PUBLICATIONS</a>
+        </li>
+        <li class="nav-button">
+          <a href="html/courses.html">COURSES</a>
+        </li>
+        <li class="nav-button">
+          <a href="gallery.html">GALLERY</a>
+        </li>
+        
+      </ul>
+      <span id="hideshow" style="visibility: hidden;">
+        <img src="../img/menuicon.png" id="menuicon">
+      </span>
+      
+    </nav>
+  </header>
 
-<main role="main">
-	<div class="container">
-		<div class="contents">
-			<h1>Web Application Development</h1>
-      <div id="tab">
-        <div class="first-tab" data-tab="main">Home</div>
-        <div class="deactive last-tab" data-tab="slides">Slides</div>
-        <div class="deactive last-tab" data-tab="question">1%Questions</div>
-      </div>
-      <div id="hl"></div>
+  <main role="main">
+    <div class="container">
+      <div class="contents">
+        <h1>Web Application Development</h1>
+        <div id="tab">
+          <div class="first-tab" data-tab="main">Home</div>
+          <div class="deactive last-tab" data-tab="slides">Slides</div>
+          <div class="deactive last-tab" data-tab="question">1%Questions</div>
+        </div>
+        <div id="hl"></div>
 
-      <div class="search-bar" id="search-bar">
+        <div class="search-bar" id="search-bar">
           <!--      <label for="msg"></label><input id="msg" name="msg"/>-->
         </div>
-      <div id="main">
+        <div id="main">
           <div class="wrap-subcontent">
             <h3>Course Objectives</h3>
             <p>
-              In this course, the followings will be covered to adequately enable web programming and web application development:
+              In this course, the followings will be covered to adequately enable web programming and web application
+              development:
             </p>
             <ol>
-              <li>Understand the protocols, language  and systems used on the Web (HTML, CSS, HTTP, URLs, XML)</li>
-              <li>Understand the functions of clients and servers on the Web &amp; learn how to implement client-side scripts (JavaScript) and server-side scripts (PHP)</li>
-              <li>Obtain ability to design and implement an interactive web site where usability, accessibility and internationalization issues are considered</li>
+              <li>Understand the protocols, language and systems used on the Web (HTML, CSS, HTTP, URLs, XML)</li>
+              <li>Understand the functions of clients and servers on the Web &amp; learn how to implement client-side
+                scripts (JavaScript) and server-side scripts (PHP)</li>
+              <li>Obtain ability to design and implement an interactive web site where usability, accessibility and
+                internationalization issues are considered</li>
               <li>Learn how to use/manage database associated with web applications (mainly storage and retrieval)</li>
             </ol>
           </div>
-        
+
           <div class="wrap-subcontent">
             <h3>Lecturer: Scott Lee</h3>
             <ul>
@@ -104,96 +123,105 @@
               <li>Email: scottlee@hanyang.ac.kr</li>
             </ul>
           </div>
-        
+
           <div class="wrap-subcontent">
             <h3>Teaching Assistants</h3>
-          <ul>
-            <li> Gichan Lee
-              <ul>
-                <li>Office: 학연산클러스터 621호</li>
-                <li>Tel: 031-400-4754</li>
-                <li>Email: <a href="mailto:fantasyopy@gmail.com">fantasyopy@gmail.com</a></li>
-              </ul>
-            </li>
-            <li> HakJin Lee
-              <ul>
-                <li>Office: 학연산클러스터 621호</li>
-                <li>Tel: 031-400-4754</li>
-                <li>Email: <a href="mailto:gsdjini91@gmail.com">gsdjini91@gmail.com</a></li>
-              </ul>
-            </li>
-          </ul>
+            <ul>
+              <li> Gichan Lee
+                <ul>
+                  <li>Office: 학연산클러스터 621호</li>
+                  <li>Tel: 031-400-4754</li>
+                  <li>Email: <a href="mailto:fantasyopy@gmail.com">fantasyopy@gmail.com</a></li>
+                </ul>
+              </li>
+              <li> HakJin Lee
+                <ul>
+                  <li>Office: 학연산클러스터 621호</li>
+                  <li>Tel: 031-400-4754</li>
+                  <li>Email: <a href="mailto:gsdjini91@gmail.com">gsdjini91@gmail.com</a></li>
+                </ul>
+              </li>
+            </ul>
           </div>
-        
+
           <div class="wrap-subcontent">
             <h3>Places &amp; Dates</h3>
             <p>Class 1 (23497)</p>
-              <ul>
-                <li>Lecture : Thu (09:00 - 10:30) &amp; Fri (13:00 - 14:30) @ Engineering Building #1 Room 402</li>
-                <li>Lab : Fri (09:00 - 11:00) @ Engineering Building #4 PC Room 1 & 2</li>
-              </ul>
+            <ul>
+              <li>Lecture : Thu (09:00 - 10:30) &amp; Fri (13:00 - 14:30) @ Engineering Building #1 Room 402</li>
+              <li>Lab : Fri (09:00 - 11:00) @ Engineering Building #4 PC Room 1 & 2</li>
+            </ul>
             <p>Class 2 (24465)</p>
-               <ul>
-                <li>Lecture : Thu (10:30 - 12:00)  &amp; Fri (14:30 - 16:00) @ Engineering Building #1 Room 407</li>
-                <li>lab : Fri (16:00 - 18:00) @ Engineering Building #4 PC Room 1 & 2 </li>
-              </ul>
+            <ul>
+              <li>Lecture : Thu (10:30 - 12:00) &amp; Fri (14:30 - 16:00) @ Engineering Building #1 Room 407</li>
+              <li>lab : Fri (16:00 - 18:00) @ Engineering Building #4 PC Room 1 & 2 </li>
+            </ul>
           </div>
-        
+
           <div class="wrap-subcontent">
             <h3>Course Forum</h3>
             <ul>
               <li><a href="https://learn.hanyang.ac.kr/">Blackboard</a></li>
             </ul>
           </div>
-        
+
           <div class="wrap-subcontent">
             <h3>Textbooks</h3>
             <ul>
-              <li>Marty Stepp, Jessica Miller, Victoria Kirst, <strong>Web Programming Step by Step: Second Edition</strong>, Step by Step Publishing, 2012 </li>
+              <li>Marty Stepp, Jessica Miller, Victoria Kirst, <strong>Web Programming Step by Step: Second
+                  Edition</strong>, Step by Step Publishing, 2012 </li>
             </ul>
           </div>
-        
+
           <div class="wrap-subcontent">
             <h3>Course Schedule</h3>
-          <ul>
-          <li>Week 01 : 05/09/2019 - Introduction &amp; The Internet and World Wide Web</li>
-            <li>Week 01 : 06/09/2019 - Basic HTML</li>
-            <li>Week 02 : 12/09/2019 - No Lecture (추석 Thanksgiving)</li>
-            <li>Week 02 : 13/09/2019 - No Lecture (추석 Thanksgiving)</li>
-            <li>Week 03 : 19/09/2019 - Basic HTML</li>
-            <li>Week 03 : 20/09/2019 - CSS for Styling </li>
-            <li>Week 04 : 26/09/2019 - CSS for Styling</li>
-            <li>Week 04 : 27/09/2019 - Page Layout </li>
-            <li>Week 05 : 02/10/2019 - [특강] 게임 서버 개발 - 17:00 ~ 19:00 @제1학술관 101호 (supplementary lecture for 03/10/2019) </li>
-            <li>Week 05 : 03/10/2019 - No Lecture (National Foundation Day) - supplementary lecture 02/10/2019</li>
-            <li>Week 05 : 04/10/2019 - Page Layout </li>
-            <li>Week 06 : 10/10/2019 - Basic PHP</li>
-            <li>Week 06 : 11/10/2019 - Basic PHP</li>
-            <li>Week 07 : 17/10/2019 - Basic PHP </li>
-            <li>Week 07 : 18/10/2019 - Forms</li>
-            <li>Week 08 : 24/10/2019 - Mid-Term Exam Preparation</li>
-            <li>Week 08 : 25/10/2019 - Mid-Term Exam 13:00 ~ 16:00 @제1학술관 101호 (Educational Building I Room 101) & 4공학관 PC1실 (Engineering Building IV PC Room 1)</li>
-            <li>Week 09 : 31/10/2019 - Forms</li>
-            <li>Week 09 : 01/11/2019 - Forms</li>
-            <li>Week 10 : 07/11/2019 - Relational Database &amp; SQL</li>
-            <li>Week 10 : 08/11/2019 - Relational Database &amp; SQL</li>
-            <li>Week 11 : 14/11/2019 - JavaScript</li>
-            <li>Week 11 : 15/11/2019 - JavaScript</li>
-            <li>Week 12 : 21/11/2019 - JavaScript &amp; DOM</li>
-            <li>Week 12 : 22/11/2019 - DOM</li>
-            <li>Week 13 : 28/11/2019 - Prototype &amp; Event</li>
-            <li>Week 13 : 29/11/2019 - Ajax &amp; XML &amp; JSON</li>
-            <li>Week 14 : 05/12/2019 - Ajax &amp; XML &amp; JSON</li>
-            <li>Week 14 : 06/12/2019 - Web Services</li>
-            <li>기말고사는 두파트로 나뉘어 진행되며 두파트 모두 출석하셔서 시험을 보셔야합니다. (Part1과 Part2는 별개의 문제가 나갑니다)<br /><br />Part1은 각자 수업 시간에 맞춰서 오시면 되며 Part2는 18:00 학술관 201호에서 진행됩니다.<hr />
-              Fianl Exam are divided into two parts. (Part1 and Part2 have different exam questions)<br /><br />Part1 : Students, Please come when your class start. Part2 will be held at 18:00 Educational Bulidng Room 201.<br /><br />Studnets must attend both parts.</li>
-            <li>Week 15 : 12/12/2019 - Final Exam Part 1 9:00 ~ 10:30 / 10:30 ~ 12:00<br /><br />@제1학술관 101호 (Educational Building I Room 101)</li>
-            <li>Week 15 : 12/12/2019 - Final Exam Part 2 18:00 ~ 20:30<br /><br />@제1학술관 201호 (Educational Building I Room 201)</li>
-            <li>Week 16 : 20/12/2019 - Team Project Presentation 13:00 ~ 15:00 / 16:00 ~ 18:00 <br /><br />
-              @4공학관 IC-PBL 강의실 (Engineering Building IV PC IC-PBL Room)<br /><br />
-              @Submit due date : 12/20 12:00 (Implementation, Presentation, Report)<br /><br />
-              @Submit Email : hyuwebappdev2019@gmail.com / Title : WebAppDevTeamProject_TeamName</li>
-          </ul>
+            <ul>
+              <li>Week 01 : 05/09/2019 - Introduction &amp; The Internet and World Wide Web</li>
+              <li>Week 01 : 06/09/2019 - Basic HTML</li>
+              <li>Week 02 : 12/09/2019 - No Lecture (추석 Thanksgiving)</li>
+              <li>Week 02 : 13/09/2019 - No Lecture (추석 Thanksgiving)</li>
+              <li>Week 03 : 19/09/2019 - Basic HTML</li>
+              <li>Week 03 : 20/09/2019 - CSS for Styling </li>
+              <li>Week 04 : 26/09/2019 - CSS for Styling</li>
+              <li>Week 04 : 27/09/2019 - Page Layout </li>
+              <li>Week 05 : 02/10/2019 - [특강] 게임 서버 개발 - 17:00 ~ 19:00 @제1학술관 101호 (supplementary lecture for
+                03/10/2019) </li>
+              <li>Week 05 : 03/10/2019 - No Lecture (National Foundation Day) - supplementary lecture 02/10/2019</li>
+              <li>Week 05 : 04/10/2019 - Page Layout </li>
+              <li>Week 06 : 10/10/2019 - Basic PHP</li>
+              <li>Week 06 : 11/10/2019 - Basic PHP</li>
+              <li>Week 07 : 17/10/2019 - Basic PHP </li>
+              <li>Week 07 : 18/10/2019 - Forms</li>
+              <li>Week 08 : 24/10/2019 - Mid-Term Exam Preparation</li>
+              <li>Week 08 : 25/10/2019 - Mid-Term Exam 13:00 ~ 16:00 @제1학술관 101호 (Educational Building I Room 101) &
+                4공학관 PC1실 (Engineering Building IV PC Room 1)</li>
+              <li>Week 09 : 31/10/2019 - Forms</li>
+              <li>Week 09 : 01/11/2019 - Forms</li>
+              <li>Week 10 : 07/11/2019 - Relational Database &amp; SQL</li>
+              <li>Week 10 : 08/11/2019 - Relational Database &amp; SQL</li>
+              <li>Week 11 : 14/11/2019 - JavaScript</li>
+              <li>Week 11 : 15/11/2019 - JavaScript</li>
+              <li>Week 12 : 21/11/2019 - JavaScript &amp; DOM</li>
+              <li>Week 12 : 22/11/2019 - DOM</li>
+              <li>Week 13 : 28/11/2019 - Prototype &amp; Event</li>
+              <li>Week 13 : 29/11/2019 - Ajax &amp; XML &amp; JSON</li>
+              <li>Week 14 : 05/12/2019 - Ajax &amp; XML &amp; JSON</li>
+              <li>Week 14 : 06/12/2019 - Web Services</li>
+              <li>기말고사는 두파트로 나뉘어 진행되며 두파트 모두 출석하셔서 시험을 보셔야합니다. (Part1과 Part2는 별개의 문제가 나갑니다)<br /><br />Part1은 각자 수업 시간에
+                맞춰서 오시면 되며 Part2는 18:00 학술관 201호에서 진행됩니다.
+                <hr />
+                Fianl Exam are divided into two parts. (Part1 and Part2 have different exam questions)<br /><br />Part1
+                : Students, Please come when your class start. Part2 will be held at 18:00 Educational Bulidng Room
+                201.<br /><br />Studnets must attend both parts.</li>
+              <li>Week 15 : 12/12/2019 - Final Exam Part 1 9:00 ~ 10:30 / 10:30 ~ 12:00<br /><br />@제1학술관 101호
+                (Educational Building I Room 101)</li>
+              <li>Week 15 : 12/12/2019 - Final Exam Part 2 18:00 ~ 20:30<br /><br />@제1학술관 201호 (Educational Building I
+                Room 201)</li>
+              <li>Week 16 : 20/12/2019 - Team Project Presentation 13:00 ~ 15:00 / 16:00 ~ 18:00 <br /><br />
+                @4공학관 IC-PBL 강의실 (Engineering Building IV PC IC-PBL Room)<br /><br />
+                @Submit due date : 12/20 12:00 (Implementation, Presentation, Report)<br /><br />
+                @Submit Email : hyuwebappdev2019@gmail.com / Title : WebAppDevTeamProject_TeamName</li>
+            </ul>
           </div>
           <div class="wrap-subcontent">
             <h3>Team Project</h3>
@@ -201,8 +229,8 @@
               <li><a target="_blank" href="project/project.html">Team Project</a></li>
             </ul>
           </div>
-        
-        
+
+
           <div class="wrap-subcontent">
             <h3>Team Project Group</h3>
             <ul>
@@ -212,7 +240,8 @@
                   <li><strong>박서연</strong>, 이효원, 정희재, 김재현, 모지환, 황예찬</li>
                   <li><strong>이종민</strong>, 박준영, 박진혁, 송현수, 엄세진, 이준섭</li>
                   <li><strong>김소현</strong>, 임소윤, 이정인, 강가원, 안예지</li>
-                  <li><strong>이민혁</strong>, 백승민, 김유현, <strong>Ana Carolina Cardoso</strong>,  Zhou Xueyi, Frederik Bonde</li>
+                  <li><strong>이민혁</strong>, 백승민, 김유현, <strong>Ana Carolina Cardoso</strong>, Zhou Xueyi, Frederik Bonde
+                  </li>
                   <li><strong>양재우</strong>, 주한새, 강은호, 권순범, 김하영, 안한서</li>
                   <li><strong>위준범</strong>, 배진우, 박재선, 박성수, 최준호</li>
                   <li><strong>박재용</strong>, 김동규, 이세명, 오승기, 김덕영</li>
@@ -237,8 +266,8 @@
               </li>
             </ul>
           </div>
-        
-        <!--
+
+          <!--
           <div class="wrap-subcontent last">
             <h3>Midterm Notice</h3>
             <ul>
@@ -266,19 +295,20 @@
             </ul>
           </div>
         -->
-        
+
           <div class="wrap-subcontent last">
             <h3>Assessments</h3>
             <ul>
               <li>Attendance (10%)</li>
-              <li>Midterm Exam (30%) - <a target="_blank" href="score/2019-2%20WebAppDev%20Midterm%20Score.pdf"> Midterm Score </a></li>
+              <li>Midterm Exam (30%) - <a target="_blank" href="score/2019-2%20WebAppDev%20Midterm%20Score.pdf"> Midterm
+                  Score </a></li>
               <li>Final Exam (30%)</li>
               <li>Team Project (30%)</li>
             </ul>
           </div>
-      </div>
+        </div>
 
-      <div id="slides" class="display_none">
+        <div id="slides" class="display_none">
           <div id="lecture">
             <table>
               <tr>
@@ -291,7 +321,8 @@
               </tr>
               <tr>
                 <td class="number">1</td>
-                <td class="title"><a target="_blank" href="lecture/01-www.html">The Internet &amp; World Wide Web</a></td>
+                <td class="title"><a target="_blank" href="lecture/01-www.html">The Internet &amp; World Wide Web</a>
+                </td>
               </tr>
               <tr>
                 <td class="number">2</td>
@@ -371,7 +402,8 @@
               </tr>
               <tr>
                 <td class="number">1</td>
-                <td class="title"><a target="_blank" href="labs/lab1-aboutme(HTML).html">About Me (HTML) - Week 4</a></td>
+                <td class="title"><a target="_blank" href="labs/lab1-aboutme(HTML).html">About Me (HTML) - Week 4</a>
+                </td>
               </tr>
               <tr>
                 <td class="number">2</td>
@@ -379,11 +411,13 @@
               </tr>
               <tr>
                 <td class="number">3</td>
-                <td class="title"><a target="_blank" href="labs/lab3-favorite.html">CSS Design &amp; Layout - Week 6</a></td>
+                <td class="title"><a target="_blank" href="labs/lab3-favorite.html">CSS Design &amp; Layout - Week 6</a>
+                </td>
               </tr>
               <tr>
                 <td class="number">4</td>
-                <td class="title"><a target="_blank" href="labs/lab4-movieReview.html">Movie Review (HTML, CSS, Layout)- Week 7</a></td>
+                <td class="title"><a target="_blank" href="labs/lab4-movieReview.html">Movie Review (HTML, CSS, Layout)-
+                    Week 7</a></td>
               </tr>
               <tr>
                 <td class="number">5</td>
@@ -403,64 +437,66 @@
               </tr>
               <tr>
                 <td class="number">9</td>
-                <td class="title"><a target="_blank" href="labs/lab9-maze.html">Maze (DOM, Prototype, Event)- Week 13</a></td>
+                <td class="title"><a target="_blank" href="labs/lab9-maze.html">Maze (DOM, Prototype, Event)- Week
+                    13</a></td>
               </tr>
               <tr>
                 <td class="number">10</td>
-                <td class="title"><a target="_blank" href="labs/lab10-bookSearch.html">Ajax &amp; XML &amp; JSON - Week 14</a></td>
+                <td class="title"><a target="_blank" href="labs/lab10-bookSearch.html">Ajax &amp; XML &amp; JSON - Week
+                    14</a></td>
               </tr>
             </table>
           </div>
-      </div>
-<!-- ////////////////////////// -->
-      <div id="question" class="display_none">
-        <div id="create_question">
-          <button  id="make_question">ADD</button>
         </div>
-
-        <div class="wrap-subcontent">
-          <div class="question">
-            <h3>Week 10th Question</h3>
-            <p id="10thQuest">Queston 10th</p>
+        <!-- ////////////////////////// -->
+        <div id="question" class="display_none">
+          <div id="create_question">
+            <button id="make_question">ADD</button>
           </div>
 
-          <div class="commentsect">
-            <div class="comments">
+          <div class="wrap-subcontent">
+            <div class="question">
+              <h3>Week 10th Question</h3>
+              <p id="10thQuest">Queston 10th</p>
+            </div>
 
-              <div class="comment_format">
-                <form action="" method="post">
-                  <div class="field"><input type="text" placeholder="Enter name" name="id">
-                  <input type="password" placeholder="Enter password" name="password">
-                <span>comments</span></div>
-                  <textarea rows="4" cols="30" placeholder="Your comment" name="comment" id="comment"></textarea>
-                  <div class="submit"><button type="submit" class="leave_comment">Leave comment</button></div>
-                </form>
-              </div>
+            <div class="commentsect">
+              <div class="comments">
 
-              <div class="comment_list">
-                <ul>
-                  <li>가나다라</li>
-                  <li>마바사아자차카</li>
-                </ul>
+                <div class="comment_format">
+                  <form action="" method="post">
+                    <div class="field"><input type="text" placeholder="Enter name" name="id">
+                      <input type="password" placeholder="Enter password" name="password">
+                      <span>comments</span></div>
+                    <textarea rows="4" cols="30" placeholder="Your comment" name="comment" id="comment"></textarea>
+                    <div class="submit"><button type="submit" class="leave_comment">Leave comment</button></div>
+                  </form>
+                </div>
+
+                <div class="comment_list">
+                  <ul>
+                    <li>가나다라</li>
+                    <li>마바사아자차카</li>
+                  </ul>
+                </div>
+
               </div>
 
             </div>
 
           </div>
 
+          <div class="wrap-subcontent last">
+            <div class="question">
+              <h3>Week 8th Question</h3>
+              <p id="8thQuest">Question 8th</p>
+            </div>
+          </div>
+          <!-- ///////////////////////// -->
         </div>
-        
-        <div class="wrap-subcontent last">
-          <div class="question">
-            <h3>Week 8th Question</h3>
-            <p id="8thQuest">Question 8th</p>
-         </div>
-        </div>
-<!-- ///////////////////////// -->
       </div>
-		</div>
-	</div>
-</main>
+    </div>
+  </main>
 
   <div class="modal-make-question-wrap hide">
     <div class="modal-make-question-content">
@@ -472,28 +508,31 @@
         <span class="wrap-quest-deadline">
           <label for="type-quest-deadline">Deadline</label>
           <input type="datetime-local" id="type-quest-deadline" value="2019-12-01T12:00">
-        </span>        
+        </span>
         <textarea class="type-quest-content"></textarea>
       </div>
       <div class="modal-footer">
         <button class="btn-quest-submit">Register!</button>
       </div>
     </div>
-  </div> 
+  </div>
 
-	<footer role="contentinfo">
-		<div class="container">
-			<p>COPYRIGHT 2014 SELAB, ALL RIGHTS RESERVED. COMPUTER SCIENECE AND ENGINEERING, HANYANG UNIV. LOCATION: ENGINEERING BUILDING #3, ROOM 421. T +82-31-400-4754</p>
-		</div>
-	</footer>
+  <footer role="contentinfo">
+    <div class="container">
+      <p>COPYRIGHT 2014 SELAB, ALL RIGHTS RESERVED. COMPUTER SCIENECE AND ENGINEERING, HANYANG UNIV. LOCATION:
+        ENGINEERING BUILDING #3, ROOM 421. T +82-31-400-4754</p>
+    </div>
+  </footer>
 
 
   </div>
 
-</div>
+  </div>
 
-<script src="../js/courses-search.js"></script>
-<script src="../js/courses.js"></script>
+  <script src="../js/courses-search.js"></script>
+  <script src="../js/courses.js"></script>
+  <script src="../js/main.js" type="text/javascript"></script>
 
 </body>
+
 </html>
