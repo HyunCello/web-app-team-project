@@ -1,27 +1,30 @@
 header{
-  border: 1px solid black;
-  overflow: auto;
+  overflow: hidden;
   width: 1145px;
   margin-left:auto;
   margin-right:auto;
+  height: 60px;
 }
 nav a{
   float: left;
   visibility: visible;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
   padding:0;
 }
 nav img  {
   background-color: black;
-  border: 2px solid black;
   margin:0;
 }
 nav{
   height: 60px;
+  width:1145px;
   background-color: black;
   overflow: hidden;
-  line-height: unset;
+  line-height: initial;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 0px 0px 5px 5px;
 }
 nav ul{
   float: left;
@@ -65,7 +68,6 @@ nav ul a{
 @media (max-width:1145px){
 
   header{
-    border: 1px solid black;
     overflow: auto;
     width: auto;
   }
@@ -76,6 +78,14 @@ nav ul a{
   }
   #showhide{
     width:30px;
+  }
+  nav{
+    height: 60px;
+    width:100%;
+    background-color: black;
+    overflow: hidden;
+    line-height: unset;
+    border-radius: 0px 0px 5px 5px;
   }
 
 }

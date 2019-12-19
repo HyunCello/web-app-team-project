@@ -1,5 +1,5 @@
 /*--------------- NAVIGATION START ------------------*/
-
+/*
 header {
     height: 52px;
     width: 1145px;
@@ -78,7 +78,7 @@ nav ul a {
 .nav-button:hover {
     background-color: rgba(57, 57, 88, 0.9);
 }
-
+*/
 /*--------------- NAVIGATION END ------------------*/
 
 
@@ -89,7 +89,10 @@ nav ul a {
     font-size: 15px;
     width: 1145px;
     margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 40px;
+    padding: 0;
 }
 
 h1 {
@@ -149,9 +152,10 @@ h1 {
 
 #info {
     float: left;
-    width: 435px;
+    width: 400px;
     height: 175px;
     line-height: 30px;
+    margin-left: 30px;
 }
 
 #interest {
