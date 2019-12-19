@@ -1,4 +1,4 @@
-CountDownTimer('12/19/2019, 20:37:00', '10thQuest'); // 월_일_년
+CountDownTimer('12/23/2019, 20:37:00', '10thQuest'); // 월_일_년
 
 CountDownTimer('12/12/2019, 17:30:00', '9thQuest'); // 월_일_년 , 시간
 

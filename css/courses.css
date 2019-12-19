@@ -76,3 +76,23 @@ font-size: 30px;
 #question ul{
   list-style-image: url("/courses/images/list-img.png");
 }
+
+
+#create_question {
+  text-align:right;
+}
+
+.comment_list li {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+button {
+  color: white;
+  background-color: #00abd9;
+}
+
+#make_question {
+  width: 100px;
+    height: 40px;
+}

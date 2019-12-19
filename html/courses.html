@@ -417,20 +417,68 @@
           </div>
       </div>
 <!-- ////////////////////////// -->
-      <div id="question">
-        <div class="wrap-subcontent" >
-          <h3>Week 10th Question</h3>
-          <p id="10thQuest">Queston 10th</p>
+      <div id="question" class="display_none">
+        <div id="create_question">
+          <button  id="make_question" onclick="MakeQuestion()">New 1%</button>
         </div>
 
         <div class="wrap-subcontent" >
+          <div class="question">
+            <h3>Week 10th Question</h3>
+            <p id="10thQuest">Queston 10th</p>
+          </div>
+
+          <div class="commentsect">
+            <p>comments</p>
+            <div class="comments">
+
+              <div class="comment_format">
+                <form action="" method="post">
+                  <div class="field"><input type="text" placeholder="Enter name" name="id">
+                  <input type="password" placeholder="Enter password" name="password"></div>
+                  <textarea rows="4" cols="30" placeholder="Your comment" name="new_comment" id="new_comment"></textarea>
+                  <button type="submit">Leave comment</button>
+                </form>
+              </div>
+
+              <div class="comment_list">
+                <ul>
+                  <li >가나다라</li>
+                  <li >마바사아자차카</li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="wrap-subcontent" >
+          <div class="question">
             <h3>Week 9th Question</h3>
             <p id="9thQuest">Queston 9th</p>
+          </div>
+
+          <div id="commentsect">
+            <p>comments</p>
+              <div class="comments">
+                <div class="comment_list">
+                  <ul>
+                    <li id="comment_first">이걸사용하면 되지 않을까요오옷</li>
+                    <li id="comment_scond">마하반야다라심경 반자재 보살</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
         </div>
 
         <div class="wrap-subcontent last">
-          <h3>Week 8th Question</h3>
-          <p id="8thQuest">Question 8th</p>
+          <div class="question">
+            <h3>Week 8th Question</h3>
+            <p id="8thQuest">Question 8th</p>
+         </div>
         </div>
 <!-- ///////////////////////// -->
       </div>
