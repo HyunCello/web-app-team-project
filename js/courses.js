@@ -51,6 +51,16 @@ function CommentSection() {
 
 
 document.addEventListener(`DOMContentLoaded`, () => {
+    // 버그 수정 (슬라이드 메뉴 다시 클릭시 보이던 버그)
+    document.querySelectorAll(`#tab > div`).forEach(each => {
+        each.addEventListener(`click`, event => {
+            const questionSlide = document.querySelector(`#question`)
+            if (event.target.dataset.tab !== `question`) {
+                questionSlide.style.display = `none`
+            }
+        }, false)
+    })
+
     // ADD 버튼 클릭했을 때
     document.querySelector(`#make_question`).addEventListener(`click`, event => {
         event.stopPropagation()
@@ -74,6 +84,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
     document.querySelector(`.btn-quest-submit`).addEventListener(`click`, event => {
         console.log(`click`)
         // 민혁이에게 새로운 질문이 등록됨을 알려주고, 리스트 새로갱신
+
     })
 })    
 
