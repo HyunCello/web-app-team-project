@@ -21,13 +21,3 @@
 4. test and approve each other's code
 ```
 If you are unfamiliar with github commands, check this out [git-guide](https://rogerdudler.github.io/git-guide/)
-
-## Meeting Notes
-### 11/14
-#### Discussion
-- create repository
-- partition roles
-- ideation
-    - 1% question
-    - management page
-    - ...
