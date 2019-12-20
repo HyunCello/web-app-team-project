@@ -284,3 +284,13 @@ div.modal-footer {
   margin-left: 0;
   margin-right:0;
 }
+
+#hl{
+  background:rgb(131, 121, 143) ;
+}
+#tab div{
+  background: rgb(131, 121, 143);
+}
+#decative.last-tab{
+  background: rgb(131, 121, 143);
+}

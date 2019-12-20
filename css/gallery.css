@@ -14,7 +14,7 @@
 #hl{
     height: 5px;
     padding: 0px;
-    background-color: #626567;
+    background-color: rgb(131, 121, 143);
     clear: both;
 }
 h1{
@@ -34,5 +34,9 @@ h1{
 }
 .carousel{
     transform: scale(1.6) translateX(-50%);
+    height: 90px;
     left: 50%;
+}
+.carousel-item{
+    color: rgb(131, 121, 143);
 }

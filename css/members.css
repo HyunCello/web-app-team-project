@@ -102,9 +102,6 @@ h1 {
     font-family: Roboto;
     font-weight: 400;
 }
-h2{
-    
-}
 
 .content {
     background-color: white;
@@ -123,7 +120,7 @@ h2{
     padding-left: 10px;
     margin: 0;
     background-color: rgb(131, 121, 143) ;
-    color: black;
+    color: white;
     line-height: 52px;
     height: 52px;
 }
